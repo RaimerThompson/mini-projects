@@ -17,6 +17,7 @@ section{
   justify-content: center;
   align-items: center;
   background-color: white;
+  padding: 2rem;
 }
 
 .blue__btn{
