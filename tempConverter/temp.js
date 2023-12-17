@@ -1,21 +1,27 @@
-document.querySelector('#submit').addEventListener('click', Convertor)
+document.querySelector('#submit').addEventListener('click', convert)
 
-  // total = (total * (9/5) + 32);
+function convert(){
+//get valuye for celcuis input
+let tempCelc = document.querySelector('#c__input').value
+//convert c to fahren
+tempCelc = tempCelc * 9/5 + 32
+//show result in result 
+let result = document.querySelector('#result')
+
+result.innerText =`${tempCelc} Fahrenheight`
 
 
-function Convertor(){
-//get input value for celcicus
+//get valuye for celcuis input
+let tempFah = document.querySelector('#f__input').value
+//show result in fahrenheigt value
+//convert c to fahren
+tempFah = (tempFah - 32) * 5/9 
+//show result in result 
+console.log(tempFah);
+//show result in fahrenheight input
+result.innerText =`${tempFah} Celcius`
 
-let temp = document.querySelector('#input').value
-
-// convert value into fahrenheit
-
-temp = temp * 9/5 + 32;
-
-//show it on screen
-
-document.querySelector('#total').innerText = temp
 }
- 
 
- 
+
+

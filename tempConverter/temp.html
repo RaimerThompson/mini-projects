@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="temp.css">
-  <title>Document</title>
+  <title>Temperature Convertor</title>
 </head>
 <body>
   
@@ -12,15 +12,24 @@
     <h1 class="title">Temperature Coverter</h1>
     <form action="" id="temp__form">
       <label for=""> Celcius:</label><br>
-      <input id="input" type="number">
+      <input id="c__input" type="number">
+      <br>
     </form>
-       
-      <button id="submit">submit</button>
+       <br>
+    <button id="submit">Convert</button>
+     <br>
+     <br>
+    <form action="">
+      <label for=""> Fahrenheit:</label><br>
+      <input id="f__input" type="number">
+    </form>
 
-  <h2>Result in F:</h2>
-    <span id="total"></span>
+  <h2>Result:</h2>
+    <span id="result"></span><br>
+    <button id="reset">Reset</button>
   </div>
 
+ 
 
   <script src="temp.js"></script>
 </body>
