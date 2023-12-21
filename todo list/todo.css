@@ -8,3 +8,15 @@ body{
 .style{
   color: red;
 }
+
+.todo__container{
+  display: flex;
+  gap: .5rem;
+}
+
+.add{
+  background-color: green;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+}
