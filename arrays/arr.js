@@ -5,8 +5,20 @@ function multy(arr){
   alert(product)
 }
 
-multy([10,2,3])
+// multy([10,2,3])
 
+
+function evenArr(arr) {
+   arr = [ 2, 3, 4, 5]
+
+  for (let i = 1; i < arr.length; i++){
+    if (arr[i] % 2 === 0){
+     console.log(i); 
+    }
+  }
+}
+
+evenArr([2,3,4,5,6])
 
 
 

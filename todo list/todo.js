@@ -9,7 +9,7 @@ const todoList = []
 addBtn.addEventListener('click', function(){
   //created the todo element paragraph
   let paragraph = document.createElement('p')
-  // paragraph.classList.add('style')
+  paragraph.classList.add('style')
   //assign the input value to the new p innertext
   let name = input.value
   todoList.push(name) 
@@ -28,7 +28,6 @@ addBtn.addEventListener('click', function(){
   // added a double click to  and remove the p elemtn todo
   paragraph.addEventListener('dblclick', function (){
     todoContainer.removeChild(paragraph)
-    todoList.pop(name)
-    console.log(todoList);
+
   })
 })
