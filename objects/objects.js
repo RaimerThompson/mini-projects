@@ -49,3 +49,59 @@ console.log(result);
 }
 }
 takenum(10)
+
+
+//arrays practice
+
+//loop and print each show
+
+let array123 = ['mighty', 'foody', 'longest yard']
+
+// for ( let i = 0; i < array123.length; i++){
+//   console.log(array123[i]);
+// }
+
+array123.forEach(show => console.log(show))
+
+//create array of numbers - return new array that includes every even number from the prev array
+
+let newArray = [2, 3, 6, 7, ,8 ,9 ,10]
+
+let onlyEvens = arr => arr.filter(n => n % 2 === 0)
+
+console.log(onlyEvens(newArray));
+
+
+//create function that takes array of numbers 
+//alert the sum of the 2nd lowest and 2nd highest number
+
+function sumSecondLowandHigh(arr){
+  let sorted = arr.sort((a,b) => a-b)
+  alert( sorted[1] + sorted[sorted.length - 2])
+}
+
+sumSecondLowandHigh([2,3,1,5,4])
+
+
+
+
+//OBJETCS//
+
+//create a stopwatch object that has four properties and 3 methods
+
+let stopwatch = {}
+
+stopwatch.brand = 'Nike'
+stopwatch.color = 'black'
+stopwatch.shape = 'round'
+stopwatch.size= 'shhmmedium'
+
+stopwatch.start = function(){
+  console.log('STARTTINGNGNGGGG');
+}
+stopwatch.stop = function(){
+  console.log('STOPPPPPINGNGGGG');
+}
+stopwatch.sayBrand = function(){
+  console.log(stopwatch.brand);
+}
