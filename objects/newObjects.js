@@ -58,9 +58,9 @@ playGamesXTimes(['rock','paper', 'scissors'])
 
 let newArr = [42,19,77,33,57]
 
-let sum = nums.reduce( (acc, c) => acc + c, 0)
+// let sum = nums.reduce( (acc, c) => acc + c, 0)
 
-alert (sum)
+// alert (sum)
 //acc     //c
 // 0       42
 // 42      19
@@ -170,3 +170,46 @@ function MakeSFCharacter (punch, kick, catchPhrase, specialMove){
 }
 
 let ryu = new MakeSFCharacter('high', 'high', 'Get Over here', 'Haddddukeen')
+console.log(ryu);
+
+
+
+
+
+let stri = 'how is the sky?'
+alert(stri.endsWith('?'))
+
+let strvar = 'I am looking for a jr. dev postion'
+console.log(strvar.replaceAll('jr. dev', 'software engineering'));
+
+function rocky(){
+  let randy = Math.random()
+
+
+
+
+    if (randy < .33){
+      return 'rock'
+    }else if (randy < .66){
+      return 'paper'
+    } else {
+      return 'scissors'
+    }
+}
+
+console.log(rocky());
+
+function botty (num){
+  let botChhhh = rocky()
+
+  if((num === 'paper' && botChhhh === 'rock') || (num === 'scissors' && botChhhh === 'paper') || (num === 'rock' && botChhhh === 'scissors'))
+  {
+     console.log('you won');
+  } else if (num === botChhhh){
+    console.log('you tie');
+  } else {
+    console.log('you lose');
+  }
+}
+
+(botty('paper'))
