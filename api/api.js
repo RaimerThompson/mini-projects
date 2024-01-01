@@ -44,3 +44,46 @@ dog.jump = function (){
 dog.fetch = function(){
   console.log('yayyyyyyayyayyayyayay');
 }
+
+
+//create a tony hawk pro skater constructor that makes skating game character with 4 properties and 3methods
+
+function TonyHawkCharacter(chName, chStance, chSponsor, chMove){
+  this.characterName = chName
+  this.stance = chStance
+  this.sponsor = chSponsor
+  this.specialMove = chMove
+  this.flip = function (){
+    console.log('kick flip!!');
+  }
+  this.taunt = function (){
+    console.log(`Dont make me use my ${this.specialMove}`);
+  }
+  this.grab = function (){
+    console.log('Melon Grab');
+  }
+  
+}
+
+let kareemCampbell = new TonyHawkCharacter('Kreem', 'goofy', 'element', ' ghetto bifrd' )
+
+
+//// APIs ////
+
+//get a dog photo from dog.ceo api and place the photo in teh DOM
+
+fetch('http://dog.ceo/api/breeds/image/random')
+  .then(res => res.json())  //parse response as JSON
+  .then(data =>{
+    console.log(data.message);
+    document.querySelector('.img').src = data.message
+  })
+  .catch(err =>{
+    console.log(`error ${err}`);
+  })
+
+
+  // the interface is the http://dog.ceo
+  //used the fecth method to send that request to the server
+  //that dog.ceo url is listening for requests and when it hears a fetch request it grabs its data from the database
+  //then it responds with that data with an object data
