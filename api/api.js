@@ -72,7 +72,7 @@ let kareemCampbell = new TonyHawkCharacter('Kreem', 'goofy', 'element', ' ghetto
 
 //get a dog photo from dog.ceo api and place the photo in teh DOM
 
-fetch('http://dog.ceo/api/breeds/image/random')
+fetch("https://dog.ceo/api/breeds/image/random")
   .then(res => res.json())  //parse response as JSON
   .then(data =>{
     console.log(data.message);
@@ -87,3 +87,34 @@ fetch('http://dog.ceo/api/breeds/image/random')
   //used the fecth method to send that request to the server
   //that dog.ceo url is listening for requests and when it hears a fetch request it grabs its data from the database
   //then it responds with that data with an object data
+
+
+  //create pizza object
+
+  let pizza = {}
+
+  pizza.toppings = ['pepperoni', 'onion', 'jalapenos']
+  pizza.size = 'large'
+  pizza.crust = 'stuffed'
+  pizza.sauce = 'heavy'
+  pizza.estimatedDelivery = function(){
+    console.log('calculating');
+  }
+  pizza.burnMouth = function(){
+    console.log('ouchies');
+  }
+  pizza.frisbee = function(){
+    console.log('weeeeeeeeeee');
+  }
+
+
+  //drinks api
+
+  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+  .then(res => res.json())
+  .then(data => {
+    console.log(data.drinks);
+  })
+  .then(err =>{
+    console.log(`error ${err}`);
+  })
