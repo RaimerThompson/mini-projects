@@ -72,11 +72,11 @@ let kareemCampbell = new TonyHawkCharacter('Kreem', 'goofy', 'element', ' ghetto
 
 //get a dog photo from dog.ceo api and place the photo in teh DOM
 
-fetch("https://dog.ceo/api/breeds/image/random")
+fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
   .then(res => res.json())  //parse response as JSON
   .then(data =>{
-    console.log(data.message);
-    document.querySelector('.img').src = data.message
+    console.log(data);
+    document.querySelector('.img').src = data.url
   })
   .catch(err =>{
     console.log(`error ${err}`);
@@ -110,11 +110,11 @@ fetch("https://dog.ceo/api/breeds/image/random")
 
   //drinks api
 
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
-  .then(res => res.json())
-  .then(data => {
-    console.log(data.drinks);
-  })
-  .then(err =>{
-    console.log(`error ${err}`);
-  })
+  // fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+  // .then(res => res.json())
+  // .then(data => {
+  //   console.log(data.drink);
+  // })
+  // .catch(err =>{
+  //   console.log(`error ${err}`);
+  // })
