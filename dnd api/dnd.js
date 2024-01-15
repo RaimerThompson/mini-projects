@@ -29,5 +29,5 @@ function getFetch(){
 
 }
 
-console.log(fetch);
+
 
